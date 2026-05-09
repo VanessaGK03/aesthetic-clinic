@@ -1,0 +1,173 @@
+
+
+.procedures {
+  padding: 120px 6%;
+  text-align: center;
+/*
+  background: linear-gradient(
+    180deg,
+    #f2f6ff 0%,
+    #e4ecff 50%,
+    #dce7ff 100%
+  );*/
+}
+
+
+
+/* slider */
+
+.slider-container {
+  position: relative;
+  width: 100%;
+}
+
+.slider-window {
+  overflow: hidden;
+  width: 100%;
+  padding: 25px 10px;
+}
+
+.procedures-slider {
+  display: flex;
+  transition: transform 0.6s ease;
+  gap: 30px;
+}
+
+/* cards */
+
+.procedure-card {
+  min-width: calc(25% - 22px);
+  box-sizing: border-box;
+
+  height: 550px;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 22px;
+
+  background: rgba(120, 120, 120, 0.08);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 8px 8px rgba(0,0,0,0.2);
+
+  transition: all 0.9s ease;
+}
+
+.procedure-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+
+/* image */
+
+.procedure-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* text */
+
+.procedure-card h4 {
+  font-size: 15px;
+  margin-top: 15px;
+  color: rgb(56, 56, 56)
+}
+
+.procedure-price {
+  font-size: 15px;
+  font-weight: 500;
+  color: #0b5ed7;
+}
+
+.procedure-desc {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  margin: 6px 0;
+}
+
+
+
+/* arrows */
+
+.arrow {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 32px;
+
+  border: none;
+  background: rgba(255,255,255,0.4);
+
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  backdrop-filter: blur(10px);
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+
+  transition: opacity 0.3s ease;
+}
+
+.arrow:disabled{
+  opacity: 0;
+  cursor: default;
+}
+
+.arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+
+.arrow.left {
+  left: -20px;
+}
+
+
+
+.arrow.right {
+  right: -20px;
+}
+
+
+@media (max-width: 900px) {
+
+  .procedure-card {
+    min-width: 100%; 
+  }
+
+  .procedures-slider {
+    gap: 0; 
+  }
+
+  .arrow.left {
+    left: 10px;
+  }
+
+  .arrow.right {
+    right: 10px;
+  }
+}

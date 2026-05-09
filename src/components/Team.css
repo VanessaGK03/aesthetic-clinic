@@ -1,0 +1,131 @@
+.team{
+padding:120px 6%;
+background:#f7f9ff;
+}
+
+
+
+.team-card{
+display:grid;
+grid-template-columns:1fr 1fr;
+min-height:500px;
+margin-bottom:80px;
+
+/*border-radius:20px;*/
+overflow:hidden;
+/*background:white;
+
+box-shadow:0 20px 40px rgba(0,0,0,0.08);*/
+
+opacity:0;
+transform:translateY(80px);
+transition:all 0.8s ease;
+}
+
+.team-card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+
+
+.team-card:nth-child(odd) .team-info{
+order:2;
+}
+
+.team-card:nth-child(odd) .team-image{
+order:1;
+}
+
+/* info */
+
+.team-info{
+padding:60px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.team-info h3{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.team-info h4{
+font-size:20px;
+color:#0b5ed7;
+margin-bottom:20px;
+}
+
+.team-info p{
+font-size:16px;
+color:#555;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+
+/* image */
+.team-image{
+    border-radius:20px;
+}
+
+.team-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+
+  .team-card {
+    grid-template-columns: 1fr; 
+    text-align: center;
+    min-height: auto;
+    margin-bottom: 50px;
+  }
+
+  /* махаме swap логиката */
+  .team-card:nth-child(odd) .team-info,
+  .team-card:nth-child(odd) .team-image {
+    order: unset;
+  }
+
+  .team-info {
+    padding: 30px 20px;
+  }
+
+  .team-info h3 {
+    font-size: 24px;
+  }
+
+  .team-info h4 {
+    font-size: 16px;
+  }
+
+  .team-info p {
+    font-size: 14px;
+  }
+
+  .team-info button {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .team-image {
+    width: 100%;
+  }
+
+  .team-image img {
+    height: 280px;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .team-card img {
+    object-position: center top;
+  }
+}

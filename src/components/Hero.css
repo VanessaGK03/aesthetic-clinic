@@ -1,0 +1,85 @@
+.hero {
+  min-height: 90vh;
+  background-image: url("../assets/team3.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  margin-top: 60px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.1) 0%,
+    rgba(0,0,0,0.4) 55%,
+    rgba(0,0,0,0.7) 100%
+  );
+}
+
+.hero-content {
+  width: 45%;
+ /* margin-right: 5%;*/
+ /* margin-top: 150px;*/
+  color: white;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-content h1,
+.hero-content p {
+  text-shadow: 0 6px 20px rgba(0,0,0,2);
+}
+
+.hero-btn {
+  padding: 18px 40px;
+  font-size: 16px;
+  border-radius: 30px;
+  margin-top: 20px;
+  box-shadow: 0 6px 15px rgba(254, 254, 254, 0.500);
+  background-color: rgb(8, 144, 235);
+}
+
+.hero-btn:hover {
+  box-shadow: 0 6px 15px rgba(254, 254, 254, 0.753);
+}
+
+@media (max-width: 900px) {
+
+  .hero {
+    justify-content: center; 
+    text-align: center;
+    background-position: 70% center; 
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
