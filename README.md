@@ -22,10 +22,10 @@ Modern responsive aesthetic clinic website built with React and Vite.
 ## Screenshots
 
 ### Home Page
-![Home](./assets/screenshots/home.png)
+![Home](./src/assets/screenshots/home.png)
 
 ### Procedures
-![Procedures](./assets/screenshots/procedures.png)
+![Procedures](./src/assets/screenshots/procedures.png)
 
 ### Mobile Version
-![Mobile](./assets/screenshots/mobile.png)
+![Mobile](./src/assets/screenshots/mobile.png)
